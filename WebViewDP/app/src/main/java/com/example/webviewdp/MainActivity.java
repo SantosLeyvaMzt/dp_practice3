@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        /*
+        Se personaliza funcionalidad de botón 'back', si se puede retroceder dentro de la página cargada
+        en el WebView, retrocede sin salir de la app, de lo contrario, cierra la apliación.
+        * */
         if(web.canGoBack()){
             web.goBack();
         }else {
